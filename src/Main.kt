@@ -1,6 +1,10 @@
+import abstract.ATeamplate
+import abstract.BaseTeamplate
+import interfaces.A
+import interfaces.B
+import interfaces.MyInterface
 
-
-fun main(args: Array<String>){
+fun main(args: Array<String>) {
 
 
     //STRINGS
@@ -11,7 +15,7 @@ fun main(args: Array<String>){
 
 
     println("Hello $name")
-    println("a+b = ${a+b}")
+    println("a+b = ${a + b}")
 
     //CLASS
     val userJava = UserJava("email@email.com")
@@ -43,7 +47,53 @@ fun main(args: Array<String>){
     var b2: Boolean = false
     var b4: Boolean = true
 
+    myFirstFunction()
+    myFirstFunction2(1)
+    print(myFirstFunction4(2, 2.3))
 
+    interf()
+
+    abs()
+}
+
+
+//FUNCTIONS
+
+//return
+fun myFirstFunction():Int{
+return 1
+}
+
+//get var
+fun myFirstFunction2(a: Long):Int{
+    return a.toInt()
+}
+
+//void
+fun myFirstFunction3(){
+
+}
+
+//another way return
+fun myFirstFunction4(a: Long, b:Double) = a+b
+
+//INTERFACES
+fun interf (){
+ var v1: MyInterface = A()
+ var v2: MyInterface = B()
+    println()
+    println("Interfaces")
+    v1.fun1()
+    v2.fun1()
+}
+
+//ABSTRACR
+fun abs (){
+ var v1: BaseTeamplate = ATeamplate()
+ v1.a()
+ v1.minus()
+ v1.a()
 
 
 }
+
